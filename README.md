@@ -1,2 +1,2 @@
-# linux-commands
-simple repo for recreating the linux commands
+# c-everyday
+Programming in c-everyday
