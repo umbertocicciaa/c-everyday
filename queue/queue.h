@@ -6,11 +6,12 @@ typedef int QUEUE_TYPE;
 
 typedef struct queue{
   unsigned int capacity;
-  unsigned int count;
+  unsigned int bot;
+  unsigned int top;
   STACK_TYPE* items;
 }queue_T;
 
-queue* queue_alloc(int capacity);
+queue_T* queue_alloc(int capacity);
 void queue_free(queue_T* stack);
 
 enqueue(queue_T* queue, QUEUE_TYPE item);
