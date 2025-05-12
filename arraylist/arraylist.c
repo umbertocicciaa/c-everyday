@@ -9,6 +9,7 @@ arraylist_T* arraylist_alloc(unsigned int capacity){
   array_list->items = malloc(sizeof(ARRAYLIST_TYPE)*capacity);
   array_list->capacity = capacity;
   array_list->size = 0;
+  return array_list;
 }
 void arraylist_free(arraylist_T* array){
   free(array->items);
