@@ -14,8 +14,8 @@ typedef struct queue{
 queue_T* queue_alloc(int capacity);
 void queue_free(queue_T* stack);
 
-enqueue(queue_T* queue, QUEUE_TYPE item);
-dequeue(queue_T* queue);
+void enqueue(queue_T* queue, QUEUE_TYPE item);
+QUEUE_TYPE dequeue(queue_T* queue);
 
 void queue_print(queue_T* queue);
 bool queue_is_empty(queue_T* queue);

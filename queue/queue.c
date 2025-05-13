@@ -17,12 +17,12 @@ void queue_free(queue_T* stack){
   stack = NULL;
 }
 
-enqueue(queue_T* queue, QUEUE_TYPE item){
+void enqueue(queue_T* queue, QUEUE_TYPE item){
   
 }
 
-dequeue(queue_T* queue){
-  QUEUE_TYPE result = queue->items[queue->bot]
+QUEUE_TYPE dequeue(queue_T* queue){
+  
 }
 
 void queue_print(queue_T* queue){
