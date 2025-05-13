@@ -26,7 +26,16 @@ void arraylist_insert(arraylist_T* array, ARRAYLIST_TYPE element){
   array->size++;  
 }
 void arraylist_remove(arraylist_T* array, ARRAYLIST_TYPE element){
-
+  if(arraylist_is_empty(array) || arraylist_find(array,element)==false)
+    return;
+  for(unsigned int i=0; i< array->capacity; i++){
+    if(array->items[i]==element)
+      for(unsigned int j=i+1;j<array->capacity;j++){
+        array->items[j-1]=array->items[j];
+	array->items[j]=-1;
+      }
+  }
+  array->size--;
 }
 
 bool arraylist_is_empty(arraylist_T* array){
@@ -37,4 +46,11 @@ bool arraylist_find(arraylist_T* array, ARRAYLIST_TYPE element){
     if(array->items[i]==element)
       return true;
   return false;
+}
+
+void arraylist_print(arraylist_T* array){
+  for (unsigned int i = 0; i < array->size; i++){
+     printf("%d ", array->items[i]);
+  }
+  printf("\n");
 }

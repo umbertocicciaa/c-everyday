@@ -19,4 +19,5 @@ void arraylist_remove(arraylist_T* array, ARRAYLIST_TYPE element);
 bool arraylist_is_empty(arraylist_T* array);
 bool arraylist_find(arraylist_T* array, ARRAYLIST_TYPE element);
 
+void arraylist_print(arraylist_T* array);
 #endif
