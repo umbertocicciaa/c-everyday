@@ -8,11 +8,11 @@ typedef struct queue{
   unsigned int capacity;
   unsigned int bot;
   unsigned int top;
-  STACK_TYPE* items;
+  QUEUE_TYPE* items;
 }queue_T;
 
 queue_T* queue_alloc(int capacity);
-void queue_free(queue_T* stack);
+void queue_free(queue_T* queue);
 
 void enqueue(queue_T* queue, QUEUE_TYPE item);
 QUEUE_TYPE dequeue(queue_T* queue);
