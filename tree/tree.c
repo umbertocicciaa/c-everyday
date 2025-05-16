@@ -8,7 +8,7 @@ void pre_order(tree_T *tree){
 void in_order(tree_T *tree){
   if(tree!=NULL){
     in_order(tree->left);
-    printf("Element %d", tree->item);
+    printf("Element %d \n", tree->item);
     in_order(tree->right);
   }
 }

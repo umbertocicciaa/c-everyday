@@ -5,6 +5,8 @@
 int main(){
   tree_T* tree=NULL;	
   tree=tree_insert(tree, 1);
+  tree=tree_insert(tree, 2);
+  tree=tree_insert(tree, -1);
   in_order(tree);  
   return 0;
 }
