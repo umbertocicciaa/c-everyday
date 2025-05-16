@@ -4,20 +4,22 @@
 
 typedef int TREE_TYPE;
 
-typedef struct tree{
+struct tree{
   TREE_TYPE item;
-  struct tree_T* left;
-  struct tree_T* right;
-}tree_T;
+  struct tree *left;
+  struct tree *right;
+};
 
-void pre_order(tree_T* tree);
-void in_order(tree_T* tree);
-void post_order(tree_T* tree);
-void breadth_first(tree_T* tree);
+typedef struct tree tree_T;
 
-bool tree_is_empty(tree_T* tree);
+void pre_order(tree_T *tree);
+void in_order(tree_T *tree);
+void post_order(tree_T *tree);
+void breadth_first(tree_T *tree);
 
-tree_T* tree_insert(tree_T* tree, TREE_TYPE element);
-void tree_remove(tree_T* tree, TREE_TYPE element);
+bool tree_is_empty(tree_T *tree);
+
+tree_T *tree_insert(tree_T *tree, TREE_TYPE element);
+void tree_remove(tree_T *tree, TREE_TYPE element);
 
 #endif
