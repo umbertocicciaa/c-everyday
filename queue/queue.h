@@ -5,9 +5,9 @@
 typedef int QUEUE_TYPE;
 
 typedef struct queue{
-  unsigned int capacity;
-  unsigned int bot;
-  unsigned int top;
+  int capacity;
+  int bot;
+  int top;
   QUEUE_TYPE* items;
 }queue_T;
 
