@@ -31,7 +31,7 @@ void stack_push(stack_T *stack, STACK_TYPE item)
     stack->count++;
 }
 
-int stack_pop(stack_T *stack)
+STACK_TYPE stack_pop(stack_T *stack)
 {
     if (stack_is_empty(stack))
     {
